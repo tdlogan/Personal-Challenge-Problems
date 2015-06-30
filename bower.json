@@ -1,0 +1,24 @@
+{
+  "name": "Personal Challenges",
+  "version": "1.0.0",
+  "homepage": "https://github.com/tdlogan/Personal-Challenge-Problems",
+  "description": "Practice Interview Questions with ES6",
+  "main": "index.html",
+  "authors": [
+    "Thomas Logan"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "chai": "~1.9.1",
+    "mocha": "~1.18.2"
+  }
+}
