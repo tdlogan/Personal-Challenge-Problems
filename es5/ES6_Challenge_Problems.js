@@ -3,7 +3,33 @@
 //Writing a traditional function declaration here is necessary
 //In Babel this is not attached to window and will transpile into undefined!
 String.prototype.permutationCheck = function(str) {
+  if (str.length !== this.length) {
+    return false;
+  }
 
+  let characters = {};
+  let letters = str.split('');
+
+  for (let i of letters) {
+    if (characters[i] === undefined) {
+      characters[i] = 1;
+    } else {
+      characters[i]++;
+    }
+  }
+
+  for (let j of this) {
+    if (characters[j]) {
+      characters[j]--;
+      if (characters[j] === 0) {
+        delete characters[j];
+      }
+    } else {
+      return false;
+    }
+  } 
+
+  return true;
 } 
 ;//Create a function to determine if a string has all unique characters
 
