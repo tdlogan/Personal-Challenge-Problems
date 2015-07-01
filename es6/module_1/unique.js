@@ -7,5 +7,5 @@ let unique = (str) => {
 //EXTRA CREDIT: Implement the unique problem without creating additioanl data structures
 
 let unique_extra = (str) => {
-
+  
 }

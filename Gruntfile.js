@@ -19,11 +19,15 @@ module.exports = function(grunt) {
             'es5/transpiled.js' : 'es5/ES6_Challenge_Problems.js'
           }
         }
-      }
+      },
+      watch: {
+        files: ['es6/**/*.js'],
+        tasks: ['default'],
+      },
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  // grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['concat', 'babel']);
 
