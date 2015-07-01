@@ -11,7 +11,13 @@ String.prototype.stringCompression = function () {}; //Given two strings, implem
 
 //Writing a traditional function declaration here is necessary
 //In Babel this is not attached to window and will transpile into undefined!
-String.prototype.permutationCheck = function (str) {}; //Create a function to determine if a string has all unique characters
+String.prototype.permutationCheck = function (str) {}; //In this problem we want to check to see if two strings are rotations of each other
+//You may only use one call to the given method .substring()
+
+//Example: stringRotation("thomas", "omasth"); -> true
+//Example: stringRotation("thomas", "smotha");-> false
+
+var stringRotation = function stringRotation(str1, str2) {}; //Create a function to determine if a string has all unique characters
 
 var unique = function unique(str) {};
 
