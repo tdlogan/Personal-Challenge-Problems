@@ -76,8 +76,45 @@ String.prototype.permutationCheck = function (str) {
   return true;
 }; //Create a function to determine if a string has all unique characters
 
-var unique = function unique(str) {};
+var unique = function unique(str) {
+  //Store of unique characters
+  var characters = {};
 
-//EXTRA CREDIT: Implement the unique problem without creating additioanl data structures.
+  //Split the string into an array in order to avoid problems with unicode characters that have multiple indices
+  var letters = str.split('');
+
+  var _iteratorNormalCompletion3 = true;
+  var _didIteratorError3 = false;
+  var _iteratorError3 = undefined;
+
+  try {
+    for (var _iterator3 = letters[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var i = _step3.value;
+
+      if (characters[i]) {
+        return false;
+      } else {
+        characters[i] = true;
+      }
+    }
+  } catch (err) {
+    _didIteratorError3 = true;
+    _iteratorError3 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion3 && _iterator3['return']) {
+        _iterator3['return']();
+      }
+    } finally {
+      if (_didIteratorError3) {
+        throw _iteratorError3;
+      }
+    }
+  }
+
+  return true;
+};
+
+//EXTRA CREDIT: Implement the unique problem without creating additioanl data structures
 
 var unique_extra = function unique_extra(str) {};
