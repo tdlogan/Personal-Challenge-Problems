@@ -120,7 +120,13 @@ String.prototype.permutationCheck = function (str) {
   }
 
   return true;
-}; //Create a function to determine if a string has all unique characters
+}; //In this problem we want to check to see if two strings are rotations of each other
+//You may only use one call to the given method .substring()
+
+//Example: stringRotation("thomas", "omasth"); -> true
+//Example: stringRotation("thomas", "smotha");-> false
+
+var stringRotation = function stringRotation(str1, str2) {}; //Create a function to determine if a string has all unique characters
 
 var unique = function unique(str) {
   //Store of unique characters
