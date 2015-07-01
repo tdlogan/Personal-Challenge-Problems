@@ -1,16 +1,20 @@
 //Create a function to determine if a string has all unique characters
 
-"use strict";
+'use strict';
 
 var unique = function unique(str) {
+  //Store of unique characters
   var characters = {};
+
+  //Split the string into an array in order to avoid problems with unicode characters that have multiple indices
+  var letters = str.split('');
 
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
   var _iteratorError = undefined;
 
   try {
-    for (var _iterator = str[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    for (var _iterator = letters[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var i = _step.value;
 
       if (characters[i]) {
@@ -24,8 +28,8 @@ var unique = function unique(str) {
     _iteratorError = err;
   } finally {
     try {
-      if (!_iteratorNormalCompletion && _iterator["return"]) {
-        _iterator["return"]();
+      if (!_iteratorNormalCompletion && _iterator['return']) {
+        _iterator['return']();
       }
     } finally {
       if (_didIteratorError) {
@@ -37,6 +41,6 @@ var unique = function unique(str) {
   return true;
 };
 
-//EXTRA CREDIT: Implement the unique problem without creating additioanl data structures.
+//EXTRA CREDIT: Implement the unique problem without creating additioanl data structures
 
 var unique_extra = function unique_extra(str) {};
