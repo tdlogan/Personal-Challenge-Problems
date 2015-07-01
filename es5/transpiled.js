@@ -1,29 +1,29 @@
-//Given two strings, implement a method that determines if the input string is a permutation of the other
+//Compress a string by creating a method that returns a compressed form the of the given string.
+//If the given string is longer after the compression is attempted, return the original string instead.
+//Example: "aaabbcccc".stringCompression(); -> "a3b2c4"
+//Example: "a".stringCompression(); -> "a" would be returned, not "a1"
 
 //Writing a traditional function declaration here is necessary
-//In Babel this is not attached to window and will transpile into undefined!
+//In Babel 'this' is not attached to window and will transpile into undefined!
 'use strict';
 
-String.prototype.permutationCheck = function (str) {
-  if (str.length !== this.length) {
-    return false;
-  }
+String.prototype.stringCompression = function () {
 
-  var characters = {};
-  var letters = str.split('');
+  var letters = {};
+  var results = '';
 
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
   var _iteratorError = undefined;
 
   try {
-    for (var _iterator = letters[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    for (var _iterator = this[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var i = _step.value;
 
-      if (characters[i] === undefined) {
-        characters[i] = 1;
+      if (letters[i]) {
+        letters[i]++;
       } else {
-        characters[i]++;
+        letters[i] = 1;
       }
     }
   } catch (err) {
@@ -41,21 +41,35 @@ String.prototype.permutationCheck = function (str) {
     }
   }
 
+  for (var key in letters) {
+    results += key + letters[key];
+  }
+
+  return results.length < this.length ? results : this;
+}; //Given two strings, implement a method that determines if the input string is a permutation of the other
+
+//Writing a traditional function declaration here is necessary
+//In Babel this is not attached to window and will transpile into undefined!
+String.prototype.permutationCheck = function (str) {
+  if (str.length !== this.length) {
+    return false;
+  }
+
+  var characters = {};
+  var letters = str.split('');
+
   var _iteratorNormalCompletion2 = true;
   var _didIteratorError2 = false;
   var _iteratorError2 = undefined;
 
   try {
-    for (var _iterator2 = this[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-      var j = _step2.value;
+    for (var _iterator2 = letters[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      var i = _step2.value;
 
-      if (characters[j]) {
-        characters[j]--;
-        if (characters[j] === 0) {
-          delete characters[j];
-        }
+      if (characters[i] === undefined) {
+        characters[i] = 1;
       } else {
-        return false;
+        characters[i]++;
       }
     }
   } catch (err) {
@@ -73,28 +87,21 @@ String.prototype.permutationCheck = function (str) {
     }
   }
 
-  return true;
-}; //Create a function to determine if a string has all unique characters
-
-var unique = function unique(str) {
-  //Store of unique characters
-  var characters = {};
-
-  //Split the string into an array in order to avoid problems with unicode characters that have multiple indices
-  var letters = str.split('');
-
   var _iteratorNormalCompletion3 = true;
   var _didIteratorError3 = false;
   var _iteratorError3 = undefined;
 
   try {
-    for (var _iterator3 = letters[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-      var i = _step3.value;
+    for (var _iterator3 = this[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var j = _step3.value;
 
-      if (characters[i]) {
-        return false;
+      if (characters[j]) {
+        characters[j]--;
+        if (characters[j] === 0) {
+          delete characters[j];
+        }
       } else {
-        characters[i] = true;
+        return false;
       }
     }
   } catch (err) {
@@ -108,6 +115,45 @@ var unique = function unique(str) {
     } finally {
       if (_didIteratorError3) {
         throw _iteratorError3;
+      }
+    }
+  }
+
+  return true;
+}; //Create a function to determine if a string has all unique characters
+
+var unique = function unique(str) {
+  //Store of unique characters
+  var characters = {};
+
+  //Split the string into an array in order to avoid problems with unicode characters that have multiple indices
+  var letters = str.split('');
+
+  var _iteratorNormalCompletion4 = true;
+  var _didIteratorError4 = false;
+  var _iteratorError4 = undefined;
+
+  try {
+    for (var _iterator4 = letters[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+      var i = _step4.value;
+
+      if (characters[i]) {
+        return false;
+      } else {
+        characters[i] = true;
+      }
+    }
+  } catch (err) {
+    _didIteratorError4 = true;
+    _iteratorError4 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion4 && _iterator4['return']) {
+        _iterator4['return']();
+      }
+    } finally {
+      if (_didIteratorError4) {
+        throw _iteratorError4;
       }
     }
   }

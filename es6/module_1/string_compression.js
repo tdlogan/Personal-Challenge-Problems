@@ -7,4 +7,20 @@
 //In Babel 'this' is not attached to window and will transpile into undefined!
 String.prototype.stringCompression = function() {
 
+  let letters = {};
+  let results = "";
+
+  for (let i of this) {
+    if (letters[i]) {
+      letters[i]++;
+    } else {
+      letters[i] = 1;
+    }
+  }
+
+  for (let key in letters) {
+    results += key + letters[key];
+  }
+
+  return results.length < this.length ? results : this;
 } 

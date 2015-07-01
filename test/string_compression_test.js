@@ -9,7 +9,7 @@ describe('String Compression: return a compressed version of a string.', functio
   });
 
   it('should compress an unsorted string', function() {
-    expect("abaccccbb".stringCompression().to.equal("a2b3c4");
+    expect("abaccccbb".stringCompression()).to.equal("a2b3c4");
   });
 
 });
