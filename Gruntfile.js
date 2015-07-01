@@ -10,13 +10,13 @@ module.exports = function(grunt) {
         },
         dist: {
           src: ['es6/**/*.js'],
-          dest: 'dist/<%= pkg.name %>.js'
+          dest: 'es5/<%= pkg.name %>.js'
         }
       },
       babel: {
         dist: {
           files: {
-            'dist/transpiled.js' : 'dist/ES6_Challenge_Problems.js'
+            'es5/transpiled.js' : 'es5/ES6_Challenge_Problems.js'
           }
         }
       }
