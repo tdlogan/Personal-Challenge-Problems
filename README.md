@@ -2,8 +2,10 @@
 
 In this repo I will be working through interview style problems and adding the answers here.
 
-npm install -g babel
+# Getting Started Babel and ES6
 
-to transpile in the terminal use:
+* npm install -g babel
 
-  babel originalFile.js --out-file compiledFile.js
+* to transpile in the terminal use:
+
+  * babel originalFile.js --out-file compiledFile.js
