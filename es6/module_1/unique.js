@@ -1,6 +1,6 @@
 //Create a function to determine if a string has all unique characters
 
-var unique = function(str) {
+let unique = (str) => {
   let characters = {};
 
   for (let i of str) {
@@ -15,6 +15,6 @@ var unique = function(str) {
 
 //EXTRA CREDIT: Implement the unique problem without creating additioanl data structures.
 
-var unique_extra = function(str) {
+let unique_extra = (str) => {
 
 }
