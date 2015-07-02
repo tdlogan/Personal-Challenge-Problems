@@ -8,10 +8,6 @@ In this repo I will be working through interview style problems and adding the a
 
 # Getting Started Babel and ES6
 
-* npm install -g babel
-
-* npm install -g grunt-cli
-
 * npm install
 
 * bower install
