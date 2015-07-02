@@ -1,6 +1,6 @@
 # Personal-Challenge-Problems
 
-In this repo I will be working through interview style problems and adding the answers here.
+In this repo I will be using ES6 to work through interview style coding challenges.
 
 #ES6 Resources: 
 * http://slides.com/tneufeld/ecmascript-2015#/
