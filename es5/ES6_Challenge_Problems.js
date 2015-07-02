@@ -64,21 +64,31 @@ String.prototype.permutationCheck = function(str) {
 //Example: stringRotation("thomas", "smotha");-> false
 
 let stringRotation = (str1, str2) => {
-  if (str1.length !== str2.length) {
+  let length = str1.length;
+  //Ensure strings are the same length
+  if (length !== str2.length) {
     return false;
   }
-  //need to find where in the second string the original string starts
-  //iterate over second string
-    //if letter is equal to first letter of first string
-      //compare it to first letter of first string
-      //if letter equals first character of first string
-       //move to next letter
-  for (let i = 0; i < str2.length; i++) {
+  //Checks to see if strings are the same
+  if (str1 === str2) {
+    return true;
+  }
 
-    if (str2[i] === str1[0]) {
+  //Variables set to be the two slices of the string
+  let frontFragment;
+  let backFragment;
 
+  for (let i = 0; i < length; i++) {
+    if (str1[i] === str2[0]) {
+      if (str2.includes(str1.slice(i, length))) {
+        frontFragment = str1.slice(i, length);
+        backFragment = str1.slice(0, i);
+        break;
+      }
     }
   }
+  //Final check to ensure the concatenated string is equal to the rotated string
+  return frontFragment + backFragment === str2 ? true : false;
 }
 
 ;//Create a function to determine if a string has all unique characters
