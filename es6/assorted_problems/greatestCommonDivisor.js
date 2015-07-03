@@ -4,10 +4,10 @@
 //For example, the GCD of 8 and 12 is 4. Any two prime numbers will have a GCD of 1.
 
 let gcd = (number1, number2) => {
-}
+};
 
 //EXTRA CREDIT: Solve with recursion
 
 let gcd_recursive = (number1, number2) => {
 
-}
+};
