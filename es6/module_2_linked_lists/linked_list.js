@@ -1,8 +1,10 @@
 
 // class LinkedList {
-//   let list = {};
-//   list.head = null;
-//   list.tail = null;
+//   constructor () {
+//     let list = {};
+//     list.head = null;
+//     list.tail = null;
+//   }
 
 //   list.addToTail (value) {
 
