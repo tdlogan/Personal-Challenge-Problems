@@ -16,4 +16,10 @@ In this repo I will be using ES6 to work through interview style coding challeng
 
   * `grunt watch`
 
+#Solving Problems
+
+* Each problem module is located in the es6 folder
+
+* From there select the module and problem you would like to work on
+
 
