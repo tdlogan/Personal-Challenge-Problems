@@ -6,5 +6,5 @@
 
 let stringRotation = (str1, str2) => {
 
-}
+};
 
