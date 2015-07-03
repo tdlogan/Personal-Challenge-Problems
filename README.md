@@ -22,4 +22,7 @@ In this repo I will be using ES6 to work through interview style coding challeng
 
 * From there select the module and problem you would like to work on
 
+#Contributing to this Repo
+
+* Styles must match airbnb's style guide. https://github.com/airbnb/javascript#arrow-functions
 
