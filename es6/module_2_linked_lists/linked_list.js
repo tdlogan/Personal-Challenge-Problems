@@ -1,46 +1,46 @@
 
-class LinkedList {
-  let list = {};
-  list.head = null;
-  list.tail = null;
+// class LinkedList {
+//   let list = {};
+//   list.head = null;
+//   list.tail = null;
 
-  list.addToTail (value) {
+//   list.addToTail (value) {
 
-  }
-}
-
-
+//   }
+// }
 
 
 
 
 
-var LinkedList = function(){
-  var list = {};
-  list.head = null;
-  list.tail = null;
 
-  list.addToTail = function(value){
-  };
 
-  list.removeHead = function(){
-  };
+// var LinkedList = function(){
+//   var list = {};
+//   list.head = null;
+//   list.tail = null;
 
-  list.contains = function(target){
-  };
+//   list.addToTail = function(value){
+//   };
 
-  return list;
-};
+//   list.removeHead = function(){
+//   };
 
-var Node = function(value){
-  var node = {};
+//   list.contains = function(target){
+//   };
 
-  node.value = value;
-  node.next = null;
+//   return list;
+// };
 
-  return node;
-};
+// var Node = function(value){
+//   var node = {};
 
-/*
- * Complexity: What is the time complexity of the above functions?
- */
+//   node.value = value;
+//   node.next = null;
+
+//   return node;
+// };
+
+// /*
+//  * Complexity: What is the time complexity of the above functions?
+//  */
