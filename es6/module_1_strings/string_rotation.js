@@ -30,5 +30,5 @@ let stringRotation = (str1, str2) => {
   }
   //Final check to ensure the concatenated string is equal to the rotated string
   return frontFragment + backFragment === str2 ? true : false;
-}
+};
 

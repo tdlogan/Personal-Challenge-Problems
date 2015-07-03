@@ -21,4 +21,4 @@ String.prototype.stringCompression = function() {
   }
 
   return results.length < this.length ? results : this;
-} 
+}; 

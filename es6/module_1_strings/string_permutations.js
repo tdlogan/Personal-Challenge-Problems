@@ -28,4 +28,4 @@ String.prototype.permutationCheck = function(str) {
   } 
 
   return true;
-} 
+}; 

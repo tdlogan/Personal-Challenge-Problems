@@ -15,10 +15,10 @@ let unique = (str) => {
     }
   }
   return true;
-}
+};
 
 //EXTRA CREDIT: Implement the unique problem without creating additioanl data structures
 
 let unique_extra = (str) => {
 
-}
+};
