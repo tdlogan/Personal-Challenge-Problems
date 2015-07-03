@@ -1,31 +1,35 @@
 //In this problem we want to check to see if two strings are rotations of each other
-//You may only use one call to the given method .substring()
 
 //Example: stringRotation("thomas", "omasth"); -> true
 //Example: stringRotation("thomas", "smotha");-> false
 
+
+
 let stringRotation = (str1, str2) => {
-  // Split strings into arrays
-  let array1 = str1.split('');
-  let array2 = str2.split('');
-
-  // Find the index of the first letter of the rotated string in the original string
-  let index1 = array1.indexOf(array2[0]);
-
-  // Iterate through the rotated string, starting at the beginning
-  for(let item of array2){
-    // Step through each string simultaneously checking each character
-    if (item !== array1[index1++]) {
-      // If two characters are not equal, return false
-      return false;
-    }
-    // If the index for string1 reaches the end of the str1
-    if(index1 === array1.length){
-      // Reset the index to the beginning of the string
-      index1 = 0;
-    }
+  let length = str1.length;
+  //Ensure strings are the same length
+  if (length !== str2.length) {
+     return false;
   }
-  // Return true if loop finishes
-  return true;
-};
 
+  //Checks to see if strings are the same
+  if (str1 === str2) {
+    return true;
+  }
+ 
+  //Variables set to be the two slices of the string
+  let frontFragment;
+  let backFragment;
+ 
+  for (let i = 0; i < length; i++) {
+    if (str1[i] === str2[0]) {
+      if (str2.includes(str1.slice(i, length))) {
+        frontFragment = str1.slice(i, length);
+        backFragment = str1.slice(0, i);
+        break;
+      }
+     }
+   }
+  //Final check to ensure the concatenated string is equal to the rotated string
+  return frontFragment + backFragment === str2 ? true : false;
+ };
