@@ -2,4 +2,4 @@
 
 String.prototype.permutationCheck = function(str) {
 
-} 
+}; 
