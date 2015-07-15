@@ -22,5 +22,4 @@ describe('Rock Paper Scissors: all possible hands given a number of rounds.', fu
     var test = sampleTrivial.length;
     expect(test).to.equal(3);
   });
-
 });
